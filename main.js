@@ -5,7 +5,7 @@ var gctx;
 
 function beginGame() {
     gamearea.start();
-    player = new component(50, 50, 100, 100, 10);
+    player = new component(50, 50, 100, 100, 20);
     alert("Game began!");
 }
 
@@ -14,9 +14,10 @@ var gamearea = {
   start : function() {
     var canvas = this.canvas;
     gctx = canvas.getContext("2d");
-    canvas.width  = window.innerWidth;
+    canvas.width  = window.innerWidth+200;
     canvas.height = window.innerHeight;
     gctx = canvas.getContext("2d");
+    gctx.beginPath();
     gctx.rect(0, 0, canvas.width, canvas.height);
     for(var i = 0; i < texturesclass.length; i++) {
         textures[i] = gctx.createPattern(texturesclass[i], 'repeat');
@@ -24,11 +25,11 @@ var gamearea = {
     gctx.fillStyle = textures[1];
     gctx.fill();
     document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-    this.interval = setInterval(updateGameArea, 20);
   },
   clear : function() {
     var canvas = this.canvas;
     gctx = canvas.getContext("2d");
+    gctx.beginPath();
     gctx.rect(0, 0, canvas.width, canvas.height);
     for(var i = 0; i < texturesclass.length; i++) {
         textures[i] = gctx.createPattern(texturesclass[i], 'repeat');
@@ -45,10 +46,10 @@ function component(width, height, x, y, speed) {
   this.y = y;
   this.speed = speed;
   this.update = function(){
-    ctx = gamearea.canvas.getContext("2d");
+    ctx = gctx;
     ctx.drawImage(texturesclass[2], this.x, this.y);
   }
-  ctx = gamearea.canvas.getContext("2d");
+  ctx = gctx;
   ctx.drawImage(texturesclass[2], this.x, this.y);
 }
 
@@ -67,6 +68,7 @@ document.onkeydown = function(e) {
       player.y += player.speed;
       break;
   }
+  updateGameArea();
 }
 
 function updateGameArea() {

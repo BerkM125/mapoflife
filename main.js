@@ -1,11 +1,10 @@
-var player;
+var player = new component(50, 50, 100, 100, 10);
 var texturesclass = document.getElementsByClassName("texture");
 var textures = new Array(texturesclass.length);
 var gctx;
 
 function beginGame() {
     gamearea.start();
-    player = new component(50, 50, 100, 100, 10);
     alert("Game began!");
 }
 

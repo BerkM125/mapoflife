@@ -1,0 +1,8 @@
+#gcanvas {
+    border-color: gray;
+    border-width: 3px;
+}
+
+.texture {
+    display: none;
+}

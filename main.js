@@ -22,7 +22,6 @@ function beginGame() {
     signs.push(new signclass(1020, 500, 51, 56));
     signs.push(new signclass(1200, 300, 51, 56));
     signs.push(new signclass(1370, 110, 51, 56));
-    alert("Game began!");
 }
 
 var gamearea = {
@@ -85,7 +84,12 @@ function component(width, height, x, y, speed) {
             break;
         }
         if(ty < this.y+58) {
+          if(a === 8) {
+            document.getElementById("endingid").style.display = "block";
+            document.getElementById("startover").style.display = "block";
+          }
           document.getElementById("modalinfo").innerHTML = document.getElementById("mol"+a).innerHTML;
+          document.getElementById("modalimage").src = "images/molimg" + a + ".jpg";
           modal.style.display = "block";
           signs[a].state = 1;
           //alert("Touched a sign");
@@ -280,7 +284,7 @@ function getRandomInt(min, max) {
 } 
   
 var modal = document.getElementById("descriptionModal");
-var span = document.getElementsByClassName("close")[0]; 
+var span = document.getElementsByClassName("close")[1]; 
 
 span.onclick = function() {
   modal.style.display = "none";
@@ -288,5 +292,17 @@ span.onclick = function() {
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+  }
+}
+
+var intromodal = document.getElementById("startupModal");
+var span2 = document.getElementsByClassName("close")[0]; 
+
+span2.onclick = function() {
+  intromodal.style.display = "none";
+}     
+window.onclick = function(event) {
+  if (event.target == intromodal) {
+    intromodal.style.display = "none";
   }
 }

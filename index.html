@@ -4,9 +4,31 @@
         <link rel="stylesheet" href="mainstylesheet.css">
     </head>
     <body onload="beginGame()">
+
+        <div id="startupModal" style="display:block; overflow: auto;" class="modal">
+            <div class="modal-content" style="margin-top: -15px;">
+              <span class="close">&times;</span>
+              <h1>Map Of Life, Berkan Mertan PD 6</h1>
+              <h3>Important Note: this will require scrolling to view the entire map</h3>
+              <p id="startupinfo">Welcome to my Map of Life! Well, it's more a very easy maze than an actual map. <br>
+                                You can use the arrow keys (not WASD) to move this little orange-hooded character: <br>
+                                <img src="images/smallerspritegif.gif" width="100px"/><br>
+                                around the maze towards these little wooden signs:<br><br>
+                                <img src="images/smallersign2.png" style="margin-left:20px;" width="50px"/><br><br>
+                                Each wooden sign (upon touching it) will cause a display to appear containing an image<br>
+                                and a description of an event that happened during my life. You have to follow the path woven through the little trees,<br>
+                                and you can't take shortcuts through the barriers created <em>by</em> those trees (and by the way the small logs, stumps,<br>
+                                and bee hives are just parts of the setting, not a part of the maze.).</p>
+            </div>
+        </div>
+        <div id="startover" class="modal">
+            <h1 onclick="window.location.reload();" id="startoverh1">Start Over ⥀</h1>
+        </div>
         <div id="descriptionModal" class="modal">
             <div class="modal-content">
               <span class="close">&times;</span>
+              <h1 id="endingid" style="display: none;">You've reached the end of the map!</h1>
+              <img id="modalimage" src="images/molimg0.jpg" width="30%"/>
               <p id="modalinfo">Info Text</p>
             </div>
         </div>
@@ -44,7 +66,7 @@
 
         <p id="mol0" style="display:none;">My Map of Life will begin here, with my birthplace: I was born during the month of January in San Francisco, where I lived for approximately the first 8 months of my life. Since I was so young at the time, I only remember short glimpses and mental images of San Francisco, but other than those I barely remember what it was like. I lived there with my sister, my mom, and my dad there until my parents decided to move to Washington.</p> 
         <p id="mol1" style="display:none;">I would say my life really began here, in Issaquah, after we moved here when I was still pretty young. Like California, I don’t have a lot of memories of when we first moved here. However, thanks to my parents, there is a lot of video of certain small but major events shortly after moving (walking for the first time, counting for the first time, talking for the first time, etc.). Moving to Issaquah was certainly like a portal to a lot of the other memories I’ve had in my life.</p>
-        <p id="mol2" style="display:none;">Like I said, I have many memories around here in Issaquah, and a lot of those consist of things that happened around the pond, forest area, and hills to the near west of my house. After around age 4, I went walking through the forest a lot with my dad and my sister. At the same age, I went on walks around the hills and the pond area a lot, and I sometimes took a small RC boat I had to the pond. I also remember that after the age of 4, I was able to go sledding with my dad and my sister, which was something I couldn’t attend with them before.</p>
+        <p id="mol2" style="display:none;">Like I said, I have many memories around here in Issaquah, and a lot of those consist of things that happened around the pond, forest area, and hills to the near west of my house. After around age 4, I went walking through the forest a lot with my dad and my sister. At the same age, I went on walks around the hills and the pond area a lot, and I sometimes took a small RC boat I had to the pond. I also remember that after the age of 4, I was able to go sledding with my dad and my sister, which was something I couldn’t attend with them before. So in a weird way, turning 4 was a pretty big event in my life.</p>
         <p id="mol3" style="display:none;">Soon, all these things I did around Issaquah regularly came to a halt, after I broke my right leg in the living room of my house – I remember it had something to do with a jump I attempted, but no one exactly remembers how I broke it in the living room (I don’t know the exact date, either, but I do know it was the night of the Oscar’s). I was too little for crutches, and I didn’t want to get around in a wheelchair, either, so moving around the house got really difficult all of a sudden. I wore a thick, constantly itchy cast for a very long time before being able to walk normally again.</p>
         <p id="mol4" style="display:none;">Fast forward a few years (I was in 2nd grade at this time, or the summer before 3rd grade), I went on the best summer destination I’ve ever gone to in my life: Vilamendhoo, just one of the many islands in the Maldives. Even just the trip there was a journey: since the islands are so small, we had to take slightly rickety seaplane from Malé (which was the capital) to a patch of sea, where we took a boat to get to the main island. Upon arriving, we were immediately greeted by masseurs with free mint-lemonade drinks (of course that’s actually not what it was, but since I don’t exactly know what it was mint-lemonade was the closest way I could describe it), some for everyone arriving on the island with us. I remember doing some very memorable things there, like going whale-shark diving, swimming to the very edge of the coral reefs and hanging from the underwater cliffs, swimming alongside reef sharks and massive trevally fish. I have always dreamed of going back there again one day.</p>        
         <p id="mol5" style="display:none;">During the summer of our trip to the Maldives, we also went to Turkey (which is where my parents are from) to see relatives. Although this isn’t one of the more chronological elements in my map (since we go to Turkey almost every summer), I did want to share it because going there has shaped my life in many ways, including language, culture, and memories. On this particular summer (the one where we went to the Maldives), I remember researching all these good sightseeing and touristic locations around Istanbul and convincing my family to take me there, such as the Maiden’s Tower, Hagia Sophia, and the Rumeli Fortress. Ever since then, I’ve always liked being the person in my family to find and plot places to go and sights to see (especially those with historical value) in all the destinations we go to around the world.</p>

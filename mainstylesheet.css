@@ -22,6 +22,7 @@
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    overflow: auto;
   }
   
   .modal-content {
@@ -30,6 +31,7 @@
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    overflow: auto;
   }
   
   .close {
@@ -49,4 +51,29 @@
   #modalinfo {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 18px;
+  }
+
+  h1, h3 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  #startupinfo {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+  }
+
+  #modalimage {
+    float:left;
+    margin-right: 3%;
+  }
+
+  #startoverh1 {
+    color: white;
+    opacity: 0.5;
+    text-align:center;
+    font-weight: 300;
+  }
+
+  #startoverh1:hover {
+    opacity: 1.0;
   }

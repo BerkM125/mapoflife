@@ -173,20 +173,28 @@ function drawpath () {
 
   //Sign 1
   gctx.drawImage(texturesclass[4], 285, 110);
+  gctx.drawImage(texturesclass[14], 285, 102, 55, 55);
   //Sign 2
   gctx.drawImage(texturesclass[4], 45, 380);
+  gctx.drawImage(texturesclass[14], 45, 372, 55, 55);
   //Sign 3
   gctx.drawImage(texturesclass[4], 145, 710);
+  gctx.drawImage(texturesclass[15], 155, 712, 35, 35);
   //Sign 4
   gctx.drawImage(texturesclass[4], 295, 545);
+  gctx.drawImage(texturesclass[16], 303, 547, 35, 35);
   //Sign 5
   gctx.drawImage(texturesclass[4], 600, 110);
+  gctx.drawImage(texturesclass[14], 600, 102, 55, 55);
   //Sign 6
   gctx.drawImage(texturesclass[4], 840, 300);
+  gctx.drawImage(texturesclass[16], 848, 302, 35, 35);
   //Sign 7
   gctx.drawImage(texturesclass[4], 1020, 500);
+  gctx.drawImage(texturesclass[15], 1030, 502, 35, 35);
   //Sign 8
   gctx.drawImage(texturesclass[4], 1200, 300);
+  gctx.drawImage(texturesclass[16], 1208, 302, 35, 35);
   //Final sign
   gctx.drawImage(texturesclass[13], 1370, 110);
 }

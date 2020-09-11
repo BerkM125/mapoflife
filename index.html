@@ -4,10 +4,57 @@
         <link rel="stylesheet" href="mainstylesheet.css">
     </head>
     <body onload="beginGame()">
-        <img class="texture" src="images/grasstile.png"/>
-        <img class="texture" src="images/grasstile2.png"/>
-        <img class="texture" src="images/smallsprite.PNG"/>
-        <canvas id="gcanvas" width="100%" height="100%"></canvas>
+        <div id="descriptionModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p id="modalinfo">Info Text</p>
+            </div>
+        </div>
+
+        <img class="texture" src="images/largetree.png"/>
+        <img class="texture" src="images/grasstile3.png"/>
+        <img class="texture" src="images/grasstile4.png"/>
+        <img class="texture" src="images/smallersprite.png"/>
+        <img class="texture" src="images/smallersign2.png"/>
+        <img class="texture" src="images/stonepath5.png"/>
+        <img class="texture" src="images/stone3.jpg"/>
+        <img class="texture" src="images/bridge3.png"/>
+        <img class="texture" src="images/stump.png"/>
+        <img class="texture" src="images/log.png"/>
+        <img class="texture" src="images/largetree3.png"/>
+        <img class="texture" src="images/beehive2.gif"/>
+        <img class="texture" src="images/bee.png"/>
+        <img class="texture" src="images/finalsign4.png"/>
+
+        <img class="spriteframe" src="images/spritezip/frame_00_delay-0.08s.png"/>
+        <img class="spriteframe" src="images/spritezip/frame_01_delay-0.08s.png"/>
+        <img class="spriteframe" src="images/spritezip/frame_02_delay-0.08s.png"/>
+        <img class="spriteframe" src="images/spritezip/frame_03_delay-0.08s.png"/>
+        <img class="spriteframe" src="images/spritezip/frame_04_delay-0.08s.png"/>
+        <img class="spriteframe" src="images/spritezip/frame_05_delay-0.08s.png"/>
+        <img class="spriteframe" src="images/spritezip/frame_06_delay-0.08s.png"/>
+        <img class="spriteframe" src="images/spritezip/frame_07_delay-0.08s.png"/>
+        <img class="spriteframe" src="images/spritezip/frame_08_delay-0.08s.png"/>
+        <img class="spriteframe" src="images/spritezip/frame_09_delay-0.08s.png"/>
+        <img class="spriteframe" src="images/spritezip/frame_10_delay-0.08s.png"/>
+        <img class="spriteframe" src="images/spritezip/frame_11_delay-0.08s.png"/>
+        <img class="spriteframe" src="images/spritezip/frame_12_delay-0.08s.png"/>
+        <img class="spriteframe" src="images/spritezip/frame_13_delay-0.08s.png"/>
+        <img class="spriteframe" src="images/spritezip/frame_14_delay-0.16s.png"/>
+
+        <p id="mol0" style="display:none;">My Map of Life will begin here, with my birthplace: I was born during the month of January in San Francisco, where I lived for approximately the first 8 months of my life. Since I was so young at the time, I only remember short glimpses and mental images of San Francisco, but other than those I barely remember what it was like. I lived there with my sister, my mom, and my dad there until my parents decided to move to Washington.</p> 
+        <p id="mol1" style="display:none;">I would say my life really began here, in Issaquah, after we moved here when I was still pretty young. Like California, I don’t have a lot of memories of when we first moved here. However, thanks to my parents, there is a lot of video of certain small but major events shortly after moving (walking for the first time, counting for the first time, talking for the first time, etc.). Moving to Issaquah was certainly like a portal to a lot of the other memories I’ve had in my life.</p>
+        <p id="mol2" style="display:none;">Like I said, I have many memories around here in Issaquah, and a lot of those consist of things that happened around the pond, forest area, and hills to the near west of my house. After around age 4, I went walking through the forest a lot with my dad and my sister. At the same age, I went on walks around the hills and the pond area a lot, and I sometimes took a small RC boat I had to the pond. I also remember that after the age of 4, I was able to go sledding with my dad and my sister, which was something I couldn’t attend with them before.</p>
+        <p id="mol3" style="display:none;">Soon, all these things I did around Issaquah regularly came to a halt, after I broke my right leg in the living room of my house – I remember it had something to do with a jump I attempted, but no one exactly remembers how I broke it in the living room (I don’t know the exact date, either, but I do know it was the night of the Oscar’s). I was too little for crutches, and I didn’t want to get around in a wheelchair, either, so moving around the house got really difficult all of a sudden. I wore a thick, constantly itchy cast for a very long time before being able to walk normally again.</p>
+        <p id="mol4" style="display:none;">Fast forward a few years (I was in 2nd grade at this time, or the summer before 3rd grade), I went on the best summer destination I’ve ever gone to in my life: Vilamendhoo, just one of the many islands in the Maldives. Even just the trip there was a journey: since the islands are so small, we had to take slightly rickety seaplane from Malé (which was the capital) to a patch of sea, where we took a boat to get to the main island. Upon arriving, we were immediately greeted by masseurs with free mint-lemonade drinks (of course that’s actually not what it was, but since I don’t exactly know what it was mint-lemonade was the closest way I could describe it), some for everyone arriving on the island with us. I remember doing some very memorable things there, like going whale-shark diving, swimming to the very edge of the coral reefs and hanging from the underwater cliffs, swimming alongside reef sharks and massive trevally fish. I have always dreamed of going back there again one day.</p>        
+        <p id="mol5" style="display:none;">During the summer of our trip to the Maldives, we also went to Turkey (which is where my parents are from) to see relatives. Although this isn’t one of the more chronological elements in my map (since we go to Turkey almost every summer), I did want to share it because going there has shaped my life in many ways, including language, culture, and memories. On this particular summer (the one where we went to the Maldives), I remember researching all these good sightseeing and touristic locations around Istanbul and convincing my family to take me there, such as the Maiden’s Tower, Hagia Sophia, and the Rumeli Fortress. Ever since then, I’ve always liked being the person in my family to find and plot places to go and sights to see (especially those with historical value) in all the destinations we go to around the world.</p>
+        <p id="mol6" style="display:none;">I’ve also had a liking for boating and fishing for some time as well, and it all kind of started when I was still in 4th grade, soon after my sister came back from Disneyland for orchestra: before going to the airport to pick up my sister, we stopped at a real nice coastal pier in Des Moines (a smaller city far south of Issaquah by the coast of Puget Sound), where we learned that a big thing to do in piers and places like that was crabbing. After learning of that, that’s all we did that summer: my dad and I went all over different places in Puget Sound, setting up all sorts of mechanisms and tools for fishing, crabbing, boating, all the sorts. Although some of these trips were not as rewarding as others, it was an opportunity for learning where the more plentiful and resourceful spots around Puget Sound were. But ever since that first trip to Des Moines, I’ve always had a passion for things involving the sea.</p>
+        <p id="mol7" style="display:none;">Fast forwarding to today (quite a trip), I do have one final but recent memory that, although not too significant, it has impacted me for the last couple of weeks: one day, when I went to the forest on a walk, I saw a massive fallen tree/log kind of slanted at an angle, and I tried climbing up. Short story is, about halfway up, I fell off and landed right on my feet, inflaming a tendon or a ligament in my ankle and causing some kind of injury to my spine. It was pretty painful to walk until about a week ago, and the pain I felt from my spine and upper back stopped pretty much today. But besides just the physical way it impacted me, I guess I also got a heightened fear of heights since then, since I’ve already always had a mild fear of them.</p>
+        <p id="mol8" style="display:none;">All of these events and memories have had an impact on how I live today, from my hobbies and passions to the things I think about and plan on doing in the future. For example, like I mentioned before, one of my hobbies is diving and snorkeling, and that came from my first true experience with diving in the Maldives. And some of my memories have taught me lessons about what to exercise more caution with, especially experiences involving some kind of heights, like breaking my leg, or falling from that massive fallen tree. But again, all of them, in one way or another, have shaped who I am right now.</p>
+
+        <video id="sprite" src="images/smallspriterun.mp4" style="display:none" controls width="270" autoplay loop>
+        </video>
+        <canvas id="gcanvas" width="1100px" height="900px"></canvas>
         <script type="text/javascript" src="main.js"></script>
     </body>
 </html>

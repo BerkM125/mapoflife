@@ -105,7 +105,7 @@ function component(width, height, x, y, speed) {
   //gctx.drawImage(v,this.x,this.y);
   gctx.drawImage(spritesclass[playerframe], this.x, this.y);
 }
-var inv = setInterval(() => framep(), 50);
+var inv = setInterval(() => framep(), 80);
 function checkCollide(pointX, pointY, objectx, objecty, objectw, objecth) {
   var oTop = objecty;
   var oLeft = objectx; 
